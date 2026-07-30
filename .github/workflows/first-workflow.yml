@@ -1,0 +1,13 @@
+#Every workflow has three mandatory things 
+name: First workflow
+on:
+  workflow_dispatch:
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Welcome message 
+        run: echo "Welcome to first workflow"
+
+
+
