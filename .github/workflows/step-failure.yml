@@ -1,0 +1,32 @@
+name: Step Failure Demo
+on:
+  workflow_dispatch:
+jobs:
+  first_job: #id, name
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+        - name: Step1
+          run: |
+           sleep 10
+           echo "Step1 is successfull"
+        - name: Step2 
+          run: |
+           echo "Intentionally Failing this step"
+           exit 1
+        - name: Step3 
+          run: 
+             echo "This is Step3 "
+        - name: Step4 
+          run: 
+            echo "This is Step4 "
+  mysecondjob:
+      name: MySecondJob
+      runs-on: ubuntu-latest
+      steps:
+          - name: Step1-Say Hello again
+            run: |
+             sleep 10
+             echo "*************** Hello again from second job *****************"            
+
+
