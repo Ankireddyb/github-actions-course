@@ -1,0 +1,30 @@
+name: 1-My First Workflows 
+on:
+  workflow_dispatch:
+jobs:
+  my-first-job: #id
+    name: My first job 
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1 -say Hello
+        run: |
+          sleep 10
+          echo "******** Welcome to My first workflow ***********"
+          
+      - name: step2 -What is the todays date ?
+        run: date
+      - name : step 3 - Print current working directory 
+        run : pwd
+  my-second-job:
+      name: my second job 
+      runs-on: ubuntu-latest
+      steps:
+        - name: step1 -say agian hello 
+          run : |
+            sleep 10
+            echo "************* Hello again from Second job ***************"
+
+
+
+
+         
