@@ -30,6 +30,6 @@ jobs:
         steps: 
             - name: Deploying the Application
               run: |
-               echo"*********** Deploying the Application **********"
+               echo "*********** Deploying the Application **********"
                sleep 10
                echo "*************** Application Deployed Successfully **************"
