@@ -8,11 +8,11 @@ jobs:
           - name: printing variables
             env:
                 APP_NAME: jasmika
-                ENVIRONMET: "dev"
+                ENVIRONMENT: "dev"
             run: |
              echo "Print environmental variables"
              echo "Application name is : : $APP_NAME"
-             echo "Environment is ::: $ENVIRONMET"
+             echo "Environment is ::: $ENVIRONMENT"
     prod-job:
         runs-on: ubuntu-latest
         steps:
