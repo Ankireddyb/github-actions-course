@@ -1,0 +1,28 @@
+name: 03-step-level-variables
+on:
+    workflow_dispatch:
+jobs:
+    dev-job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: printing variables
+            env:
+                APP_NAME: jasmika
+                ENVIRONMET: "dev"
+            run: |
+             echo "Print environmental variables"
+             echo "Application name is : : $APP_NAME"
+             echo "Environment is ::: $ENVIRONMENT
+    prod-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: printing variables
+              env:
+                  APP_NAME: jasmika-prod
+                  ENVIRONMENT: "prd"
+              run: | 
+               echo "printing envoronmental variables"
+               echo "application name is ::: $APP_NAME"
+               echo "Environment name is ::: $ENVIRONMENT" 
+
+             
