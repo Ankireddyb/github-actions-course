@@ -1,0 +1,17 @@
+name: 01-env-varaible
+on:
+    workflow_dispatch:
+env:
+# env is different environment is different 
+    ENVIRONMENT: "dev"
+    APP_NAME: JasmikaTech
+jobs:
+  env-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print variables
+        run: |
+         echo "Printing Environmental Variables :::"
+         echo "Application Name is : $APP_NAME"
+         echo "Environment is :: $ENVIRONMENT"
+    
