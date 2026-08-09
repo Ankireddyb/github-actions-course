@@ -15,6 +15,9 @@ jobs:
             echo "Environment is :: $ENVIRONMENT"
     pro-job:
         runs-on: ubuntu-latest
+        env:
+            APP_NAME: jasmika-prod-app
+            ENVIRONMENT: prod
         steps:
          - name: Print Variables
            run: |
