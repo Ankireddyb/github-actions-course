@@ -5,6 +5,7 @@ env:
 # env is different environment is different 
     ENVIRONMENT: "dev"
     APP_NAME: JasmikaTech
+    # these are static variables , they are not dynamic 
 jobs:
   env-demo:
     runs-on: ubuntu-latest
@@ -14,4 +15,6 @@ jobs:
          echo "Printing Environmental Variables :::"
          echo "Application Name is : $APP_NAME"
          echo "Environment is :: $ENVIRONMENT"
-    
+
+# workflow , job , step level 
+
