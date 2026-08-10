@@ -1,0 +1,14 @@
+name: 07-repository-variables
+on:
+    workflow_dispatch:
+jobs:
+   variables-demo:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Printing Repository Variables
+         run: | 
+          echo "Printing Repository Variables"
+          echo "Application Name is ::: ${{vars.APP_NAME}}"
+          echo "Environment is ::: ${{vars.DEPLOY_ENV}}"
+          echo "Registry is ::: ${{vars.REGISTRY}}"
+          
