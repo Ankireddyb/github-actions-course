@@ -11,4 +11,11 @@ jobs:
           echo "Application Name is ::: ${{vars.APP_NAME}}"
           echo "Environment is ::: ${{vars.DEPLOY_ENV}}"
           echo "Registry is ::: ${{vars.REGISTRY}}"
-          
+   secrets-demo:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Printing Repository secrets variables
+          run: |
+           echo "Printing Repository secrets variables "
+           echo "MySecret is ::: ${{secrets.MY_SECRET}}"
+    
