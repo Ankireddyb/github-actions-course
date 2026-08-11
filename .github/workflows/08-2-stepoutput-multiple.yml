@@ -9,7 +9,7 @@ jobs:
               id: build-info
               run: |
                echo "app-name=jamikatech-app" >> $GITHUB_OUTPUT
-               echo "image_tag=${{github.sha}}" >> GITHUB_OUTPUT
+               echo "image_tag=${{github.sha}}" >> $GITHUB_OUTPUT
                echo "branch_name=${{github.ref_name}}" >> $GITHUB_OUTPUT
             - name: Read all outputs from above step
               run: |
