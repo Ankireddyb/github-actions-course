@@ -1,0 +1,20 @@
+name: 08-setup-output
+on:
+    workflow_dispatch:
+jobs:
+    step-output-demo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Set a step output 
+              id: my-step
+              run: |
+                echo "message=hello from step output">> $GITHUB_OUTPUT
+                echo "Out put has been set"
+            - name: Set Env variables 
+              run: |
+               echo "BUILD_VERSION_NUMBER=${{github.run_number}}" >> $GITHUB_ENV
+            - name: Reading step output 
+              run: |
+               echo "==========================="
+               echo "Reading stepoutput "
+               echo "message is : ${{steps.my-step.outputs.message}}"
