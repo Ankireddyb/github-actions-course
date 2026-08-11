@@ -1,0 +1,18 @@
+name: 08-2-stepoutput-multiple
+on:
+    workflow_dispatch:
+jobs:
+    multiple-outputs-demo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Set Multiple outputs
+              id: build-info
+              run: |
+               echo "app-name=jamikatech-app" >> $GITHUB_OUTPUT
+               echo "image_tag=${{github.sha}}" >> GITHUB_OUTPUT
+               echo "branch_name=${{github.ref_name}}" >> $GITHUB_OUTPUT
+            - name: Read all outputs from above step
+              run: |
+               echo "App Name is : ${{steps.build-info.outputs.app-name}}"
+               echo "Image Tag is : ${{steps.build-info.outputs.image_tag}}"
+               echo "Branch name is : ${{steps.build-info.outputs.branch_name}}"
