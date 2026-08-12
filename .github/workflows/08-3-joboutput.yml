@@ -1,0 +1,5 @@
+name: 08-3-job-output
+on:
+    workflow_dispatch:
+jobs:
+    
