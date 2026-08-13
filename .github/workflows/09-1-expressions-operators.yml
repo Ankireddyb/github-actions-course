@@ -30,10 +30,10 @@ jobs:
                echo "push or dispatch : ${{github.event_name == 'push' || github.event_name == 'workflow_dispatch'}}"
                echo "NOT push : ${{!(github.event_name == 'push')}}"
             - name: Condtional step using ==
+              if: inputs.environment == 'production'
               run: |
-               echo "================="
-               if: inputs.environment == 'production'
-               run: echo "*****Production step is running ******:::"
+                echo "================="
+                echo "*****Production step is running ******:::"
             - name: Conditional step using !=
               if: inputs.environment != 'production'
               run: echo "****** non production step is running ********"
