@@ -31,9 +31,7 @@ jobs:
                echo "NOT push : ${{!(github.event_name == 'push')}}"
             - name: Condtional step using ==
               if: inputs.environment == 'production'
-              run: |
-                echo "================="
-                echo "*****Production step is running ******:::"
+              run:  echo "*****Production step is running ******:::"
             - name: Conditional step using !=
               if: inputs.environment != 'production'
               run: echo "****** non production step is running ********"
